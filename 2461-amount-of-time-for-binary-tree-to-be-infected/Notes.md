@@ -1,0 +1,1 @@
+<h2>amount-of-time-for-binary-tree-to-be-infected Notes</h2><hr>[ Time taken: 11hrs 31m 50s ]
