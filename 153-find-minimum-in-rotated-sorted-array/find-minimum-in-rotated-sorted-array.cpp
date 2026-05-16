@@ -1,19 +1,17 @@
 class Solution {
 public:
-    int binarySearch(vector<int>nums,int start,int end){
-        if(start==end){
-            return nums[start];
-        }
-        int mid=start+(end-start)/2;
-        if(nums[mid]>nums[end]){
-            return binarySearch(nums,mid+1,end);
-        }else{
-            return binarySearch(nums,start,mid);
-        }
-    }
     int findMin(vector<int>& nums) {
-        int start=0;
-        int end=nums.size()-1;
-        return binarySearch(nums,start,end);
+        int n = nums.size();
+        int left = 0;
+        int right = n-1;
+        while(left<right){
+            int mid = left + (right-left)/2;
+            if(nums[mid]>nums[right]){
+                left = mid + 1;
+            }else{
+                right = mid;
+            }
+        }
+        return nums[left];
     }
 };
