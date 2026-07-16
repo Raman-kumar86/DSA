@@ -8,9 +8,7 @@ public:
         vector<int>lis;
         for (int i = 0; i < envelopes.size(); i++) {
             int h = envelopes[i][1];
-
             int pos = lower_bound(lis.begin(), lis.end(), h) - lis.begin();
-
             if (pos == lis.size()) {
                 lis.push_back(h);
             } else {
